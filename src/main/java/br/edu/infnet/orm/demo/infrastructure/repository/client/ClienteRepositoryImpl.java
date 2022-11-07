@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClienteRepositoryImpl implements ClienteRepository {
 
-    private final ClienteMysqlRepository repository;
+    private final ClienteMysqlRepository mysqlRepository;
 
-    public ClienteRepositoryImpl(final ClienteMysqlRepository repository) {
-        this.repository = repository;
+    public ClienteRepositoryImpl(final ClienteMysqlRepository clienteMysqlRepository) {
+        this.mysqlRepository = clienteMysqlRepository;
     }
 
     @Override
     public void salvar(final Cliente cliente) {
-        repository.save(cliente);
+        mysqlRepository.save(cliente);
     }
 }
