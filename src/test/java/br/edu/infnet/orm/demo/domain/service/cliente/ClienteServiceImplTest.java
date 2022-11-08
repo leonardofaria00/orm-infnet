@@ -24,7 +24,7 @@ class ClienteServiceImplTest {
         leonardo.getContatos().add(new Contato(TipoContato.EMAIL, "leonardofaria@infnet.com"));
         service.salvar(leonardo);
 
-        Cliente maria = new Cliente("Leonardo Faria");
+        Cliente maria = new Cliente("Maria das Couves");
         maria.setContatos(new ArrayList<>());
         maria.getContatos().add(new Contato(TipoContato.TELEFONE, "61999999999"));
         service.salvar(maria);
